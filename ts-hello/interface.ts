@@ -1,9 +1,9 @@
-interface Point {
+interface IPoint {
   x: number,
   y: number
 }
 
-let drawPoint = (point: Point) => {
+let drawPoint = (point: IPoint) => {
   // ...
 };
 
