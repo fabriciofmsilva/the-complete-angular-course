@@ -3,7 +3,7 @@ function doSomething() {
     console.log(i);
   }
 
-  console.log('Finally: ' + i);
+  // console.log('Finally: ' + i);
 }
 
 doSomething();

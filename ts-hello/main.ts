@@ -1,7 +1,7 @@
-function log(message) {
+function mylog(message) {
   console.log(message);
 }
 
-var message = 'Hello World';
+var mymessage = 'Hello World';
 
-log(message);
+mylog(mymessage);
