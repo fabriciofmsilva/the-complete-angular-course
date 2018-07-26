@@ -6,7 +6,7 @@ import { CoursesService } from './courses.service';
   template: `
     <h2>{{ title }}</h2>
     <img [src]="imageUrl" />
-    <input (keyup.enter)="onKeyUp()"/>
+    <input #email (keyup.enter)="onKeyUp(email.value)"/>
     <button class="btn btn-primary" [class.active]="isActive" [style.backgroundColor]="isActive ? 'blue' : 'white'"
       (click)="onSave($event)"
     >Save</button>
@@ -33,11 +33,9 @@ export class CoursesComponent {
     this.courses = service.getCourses();
   }
 
-  onKeyUp($event) {
-    // if ($event.keyCode === 13) {
-    //   console.log('ENTER was pressed');
-    // }
-    console.log('ENTER was pressed');
+  onKeyUp(email) {
+    // console.log($event.target.value);
+    console.log(email);
   }
 
   onSave($event) {
