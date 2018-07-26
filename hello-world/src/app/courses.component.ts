@@ -6,7 +6,7 @@ import { CoursesService } from './courses.service';
   template: `
     <h2>{{ title }}</h2>
     <img [src]="imageUrl" />
-    <button class="btn btn-primary" [class.active]="isActive">Save</button>
+    <button class="btn btn-primary" [class.active]="isActive" [style.backgroundColor]="isActive ? 'blue' : 'white'">Save</button>
     <table>
       <tr>
         <td [attr.colspan]="colSpan"></td>
