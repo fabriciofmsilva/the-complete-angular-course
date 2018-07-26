@@ -6,7 +6,7 @@ import { CoursesService } from './courses.service';
   template: `
     <h2>{{ title }}</h2>
     <img [src]="imageUrl" />
-    <button class="btn btn-primary">Save</button>
+    <button class="btn btn-primary" [class.active]="isActive">Save</button>
     <table>
       <tr>
         <td [attr.colspan]="colSpan"></td>
@@ -23,6 +23,7 @@ export class CoursesComponent {
   title = 'List of courses';
   imageUrl = 'http://lorempixel.com/400/200';
   colSpan = 2;
+  isActive = true;
   courses;
 
   constructor(service: CoursesService) {
