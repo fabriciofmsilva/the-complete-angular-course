@@ -6,7 +6,9 @@ import { CoursesService } from './courses.service';
   template: `
     <h2>{{ title }}</h2>
     <img [src]="imageUrl" />
-    <button class="btn btn-primary" [class.active]="isActive" [style.backgroundColor]="isActive ? 'blue' : 'white'">Save</button>
+    <button class="btn btn-primary" [class.active]="isActive" [style.backgroundColor]="isActive ? 'blue' : 'white'"
+      (click)="onSave($event)"
+    >Save</button>
     <table>
       <tr>
         <td [attr.colspan]="colSpan"></td>
@@ -28,5 +30,11 @@ export class CoursesComponent {
 
   constructor(service: CoursesService) {
     this.courses = service.getCourses();
+  }
+
+  onSave($event) {
+    $event.stopPropagation();
+
+    console.log('Button was clicked', $event);
   }
 }
