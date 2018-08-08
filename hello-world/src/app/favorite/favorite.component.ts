@@ -10,16 +10,13 @@ library.add(fas, far);
   templateUrl: './favorite.component.html',
   styleUrls: ['./favorite.component.css']
 })
-export class FavoriteComponent implements OnInit {
+export class FavoriteComponent {
 
   @Input('isFavorite') isFavorite = false;
 
-  @Output() click = new EventEmitter();
+  @Output() change = new EventEmitter();
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
   onFavoriteClick() {
     this.isFavorite = !this.isFavorite;
