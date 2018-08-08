@@ -14,7 +14,7 @@ export class FavoriteComponent implements OnInit {
 
   @Input('isFavorite') isFavorite = false;
 
-  @Output('change') click = new EventEmitter();
+  @Output() click = new EventEmitter();
 
   constructor() { }
 
