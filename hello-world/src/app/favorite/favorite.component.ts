@@ -12,7 +12,7 @@ library.add(fas, far);
 })
 export class FavoriteComponent implements OnInit {
 
-  @Input() isFavorite = false;
+  @Input('isFavorite') isFavorite = false;
 
   constructor() { }
 
