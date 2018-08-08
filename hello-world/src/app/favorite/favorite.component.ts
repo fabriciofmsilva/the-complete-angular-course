@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
@@ -12,7 +12,7 @@ library.add(fas, far);
 })
 export class FavoriteComponent implements OnInit {
 
-  isFavorite = false;
+  @Input() isFavorite = false;
 
   constructor() { }
 
