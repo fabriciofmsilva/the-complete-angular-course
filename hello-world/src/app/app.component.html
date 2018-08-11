@@ -1,7 +1,12 @@
 <h1>Angular</h1>
 <app-courses></app-courses>
 <app-authors></app-authors>
-<app-favorite [isFavorite]="post.isFavorite" (change)="onFavoriteChange($event)"></app-favorite>
+<app-favorite
+  [isFavorite]="post.isFavorite"
+  (change)="onFavoriteChange($event)"></app-favorite>
+<app-like
+  [likesCount]="tweet.likesCount"
+  [isLiked]="tweet.isLiked"></app-like>
 
 <input type="text" [(ngModel)]="title">
 <br>
