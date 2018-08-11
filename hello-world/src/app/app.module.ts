@@ -18,6 +18,7 @@ import { LikeComponent } from './like/like.component';
 import { NgStyleComponent } from './directives/ng-style/ng-style.component';
 import { SafeTravesalComponent } from './directives/safe-travesal/safe-travesal.component';
 import { InputFormatDirective } from './directives/custom/input-format.directive';
+import { ZippyComponent } from './zippy/zippy.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { InputFormatDirective } from './directives/custom/input-format.directive
     LikeComponent,
     NgStyleComponent,
     SafeTravesalComponent,
-    InputFormatDirective
+    InputFormatDirective,
+    ZippyComponent
   ],
   imports: [
     BrowserModule,
