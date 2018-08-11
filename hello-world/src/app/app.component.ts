@@ -19,11 +19,7 @@ export class AppComponent {
   };
   coursesIf = [1, 2];
   viewMode = 'map';
-  courses = [
-    { id: 1, name: 'course 1' },
-    { id: 2, name: 'course 2' },
-    { id: 3, name: 'course 3' }
-  ];
+  courses = [];
 
   onAdd() {
     this.courses.push({ id: 4, name: 'course 4' });
@@ -36,5 +32,17 @@ export class AppComponent {
 
   onFavoriteChange(eventsArgs: FavoriteChangedEventArgs) {
     console.log('Favorite changed: ', eventsArgs);
+  }
+
+  loadCourses() {
+    this.courses = [
+      { id: 1, name: 'course 1' },
+      { id: 2, name: 'course 2' },
+      { id: 3, name: 'course 3' }
+    ];
+  }
+
+  trackCourse(index, course) {
+    return course ? course.id : undefined;
   }
 }
