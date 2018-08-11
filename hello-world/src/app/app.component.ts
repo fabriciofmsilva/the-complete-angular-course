@@ -25,6 +25,15 @@ export class AppComponent {
     { id: 3, name: 'course 3' }
   ];
 
+  onAdd() {
+    this.courses.push({ id: 4, name: 'course 4' });
+  }
+
+  onRemove(course) {
+    const index = this.courses.indexOf(course);
+    this.courses.splice(index, 1);
+  }
+
   onFavoriteChange(eventsArgs: FavoriteChangedEventArgs) {
     console.log('Favorite changed: ', eventsArgs);
   }
