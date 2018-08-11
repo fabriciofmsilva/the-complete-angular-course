@@ -17,8 +17,13 @@ export class AppComponent {
     isLiked: false,
     likesCount: 0
   };
-  courses = [1, 2];
+  coursesIf = [1, 2];
   viewMode = 'map';
+  courses = [
+    { id: 1, name: 'course 1' },
+    { id: 2, name: 'course 2' },
+    { id: 3, name: 'course 3' }
+  ];
 
   onFavoriteChange(eventsArgs: FavoriteChangedEventArgs) {
     console.log('Favorite changed: ', eventsArgs);

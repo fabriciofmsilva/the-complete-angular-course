@@ -26,7 +26,7 @@
 <!-- <div *ngIf="courses.length === 0">
   No courses yet
 </div> -->
-<div *ngIf="courses.length > 0; then coursesList else noCourses"></div>
+<div *ngIf="coursesIf.length > 0; then coursesList else noCourses"></div>
 <ng-template #coursesList>
   List of courses
 </ng-template>
@@ -34,10 +34,10 @@
   No courses yet
 </ng-template>
 
-<div [hidden]="courses.length === 0">
+<div [hidden]="coursesIf.length === 0">
   List of courses
 </div>
-<div [hidden]="courses.length > 0">
+<div [hidden]="coursesIf.length > 0">
   No courses yet
 </div>
 
@@ -60,3 +60,9 @@
   <div *ngSwitchCase="'list'">List View Content</div>
   <div *ngSwitchDefault>Otherwise</div>
 </div>
+
+<ul>
+  <li *ngFor="let course of courses; index as i; even as isEven">
+    {{ i }} - {{ course.name }} <span *ngIf="isEven">(EVEN)</span>
+  </li>
+</ul>
