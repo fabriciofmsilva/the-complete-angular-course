@@ -20,9 +20,15 @@
   </ng-container>
 </app-panel>
 
-<!-- <div *ngIf="courses.length > 0; else noCourses">
+<div *ngIf="courses.length > 0; else noCourses">
   List of courses
-</div> -->
+</div>
+<!-- Angular construct under the hood -->
+<ng-template [ngIf]="courses.length > 0">
+  <div>
+    List of courses
+  </div>
+</ng-template>
 <!-- <div *ngIf="courses.length === 0">
   No courses yet
 </div> -->
